@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MY Form</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <style>
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .form-container input[type="submit"] {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>MY Form</h1>
+  <div class="form-container">
+    <form id="myForm" action="index.php" method="POST" enctype="multipart/form-data">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="weight">Weight:</label>
+      <input type="number" id="weight" name="weight" required>
+
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="health-report">Upload Health Report:</label>
+      <input type="file" id="health-report" name="health-report" accept=".pdf" required>
+
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </div>
+  <a href="fetch_report.php?email=example@example.com">Fetch Health Report</a>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
